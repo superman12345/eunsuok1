@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Todo from './Todo';
+import { Button, UncontrolledPopover, PopoverHeader, PopoverBody } from 'reactstrap'
+import Example from "./Example";
 
 let makeUpdater = apply => key => state => {
   return {
@@ -57,8 +59,15 @@ class Home extends Component {
 
 
       <div className="Home mt-3 text-center">
+
         {this.log}
+
         <Todo log={this.log} state={this.state}/>
+        <Button id="Popover1" type="button">
+          Launch Popover
+        </Button>
+      <Example  log={this.log} state={this.state}/>
+
 
         <h5>by eduardo.vedes</h5>
         <hr />
